@@ -1,0 +1,72 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #FFFFFF;
+}
+
+.container_botones_left {
+    width: 580px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_botones_right {
+    display: flex;
+    align-items: center;
+}
+
+.container_botones_right>img {
+    margin-right: 26px;
+    height: 1.5rem;
+
+}
+
+.btn_downloadCV {
+    width: 170px;
+    height: 40px;
+    padding: 9px 16px 10px 12px;
+    background: #5A48D0;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn_downloadCV>img {
+    margin-right: 10px;
+    height: 14px;
+}
+
+button {
+    background: none;
+    border: 0;
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 38px;
+
+    color: #5A48D0;
+
+
+    cursor: pointer;
+}
