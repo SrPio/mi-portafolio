@@ -1,0 +1,122 @@
+.container_aboutMe {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.aboutMe {
+    margin-top: 80px;
+    height: 1000px;
+    border: 1px solid #000000;
+    padding: 0 100px 0 100px;
+    max-width: 1600px;
+}
+
+.container_info {
+    position: relative;
+    top: 0px;
+    background-color: #5A48D0;
+    height: 700px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    z-index: 3;
+
+    display: flex;
+}
+
+.pic_section {
+    width: 45%;
+    height: inherit;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle_title {
+    background-color: #fff;
+    height: 450px;
+    width: 350px;
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #22292F;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.rectangle_title>h1 {
+    position: relative;
+    left: 50px;
+    top: 40px;
+}
+
+.rectangle_title>img {
+    position: relative;
+    top: 50px;
+    left: -50px;
+    height: 400px;
+    border: 1px solid;
+    filter: drop-shadow(-15px 0px 5px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(-15px 0px 5px rgba(0, 0, 0, 0.25));
+}
+
+.info_section {
+    width: 55%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info_section>p {
+    font-family: 'SF UI Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.btn_downloadCV {
+
+    background: #2D2468;
+
+    position: absolute;
+    top: 630px;
+    right: 20px;
+
+    width: 240px;
+    height: 50px;
+    padding: 9px 16px 10px 12px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn_downloadCV>img {
+    margin-right: 10px;
+    height: 14px;
+}
