@@ -1,0 +1,90 @@
+.container_project {
+    display: flex;
+    justify-content: center;
+
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px 0 100px;
+    max-width: 1600px;
+
+}
+
+.container_info_project {
+    background-color: #F3F3F3;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+
+    max-width: 1600px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px 30px 0 30px;
+
+}
+
+.container_info_project>h1 {
+    margin: 20px 0 20px;
+}
+
+
+
+
+.items>img {
+    width: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.container_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.items {
+    cursor: pointer;
+    margin: 10px;
+    width: 45%;
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+.btn_projects {
+    background: #5A48D0;
+    width: 220px;
+    height: 50px;
+    padding: 9px 16px 10px 12px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    align-self: center;
+
+    margin: 20px 0 20px;
+
+}
