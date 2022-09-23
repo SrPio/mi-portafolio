@@ -8,12 +8,11 @@
 
 .home {
     height: 690px;
-    border: solid 1px #000;
     position: relative;
     top: 80px;
     display: flex;
 
-    padding: 10px 5%;
+    padding: 10px 80px;
 
     font-family: 'SF UI Display';
     font-style: normal;
@@ -88,7 +87,6 @@ span {
     display: flex;
     justify-content: flex-end;
 
-    border: solid 1px #000;
     width: 50%;
 
 }
@@ -96,7 +94,6 @@ span {
 .container_pic>div {
     width: 580px;
     height: 100%;
-    border: solid 1px #000;
 }
 
 .glass_html {
