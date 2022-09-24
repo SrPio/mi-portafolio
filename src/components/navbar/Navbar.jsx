@@ -1,9 +1,13 @@
 import React from "react";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <div className={styles.navbar}>
+    <div
+      className={`${useScrollPosition() > 0 ? styles.shadow : ""} 
+      ${styles.navbar}`}
+    >
       <div className={styles.container_botones_left}>
         <a href="#home" className={styles.link_sections}>
           Inicio
