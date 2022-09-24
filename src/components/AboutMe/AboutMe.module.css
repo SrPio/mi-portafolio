@@ -84,7 +84,7 @@
 }
 
 .btn_downloadCV {
-
+    border: 0;
     background: #2D2468;
 
     position: absolute;

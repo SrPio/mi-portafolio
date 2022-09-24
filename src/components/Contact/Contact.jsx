@@ -3,7 +3,7 @@ import styles from "./Contact.module.css";
 
 function Contact() {
   return (
-    <div className={styles.container_contact}>
+    <div id="contact" className={styles.container_contact}>
       <div className={styles.contact}>
         <div className={styles.container_info_contact}>
           <form className={styles.contact_form} action="">
