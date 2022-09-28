@@ -41,7 +41,7 @@
     font-family: 'SF UI Display';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 29.124px;
     color: #22292F;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -54,6 +54,7 @@
     position: relative;
     left: 50px;
     top: 40px;
+    font-size: 52.36px;
 }
 
 .rectangle_title>img {
@@ -78,7 +79,8 @@
     font-family: 'SF UI Text';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 21px;
 
     color: #FFFFFF;
 }
