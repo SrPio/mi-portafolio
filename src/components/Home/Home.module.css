@@ -40,7 +40,7 @@
 }
 
 .container_title {
-    width: 50%;
+    width: 600px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,13 +48,14 @@
 
 }
 
-.container_title,
-span {
-    font-size: 45px;
+
+.home__textSaludo {
+    font-size: 60px;
 }
 
 .container_title>h1 {
     font-size: 35px;
+    width: 100%;
 }
 
 
@@ -150,4 +151,10 @@ span {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+}
+
+.home__variableText {
+    font-size: 25px;
+    /* background-color: #5A48D0;
+    color: #FFFFFF; */
 }

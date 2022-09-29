@@ -1,17 +1,48 @@
 import React from "react";
 import styles from "./Home.module.css";
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
 
 function Home() {
+  const variableText = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(variableText.current, {
+      strings: [
+        "Ingeniero de Sistemas",
+        "Desarrollador Web Front-end",
+        "Diseñador UX/UI",
+        "Creativo",
+      ], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      /* cursorChar: "|", */
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div id="home" className={styles.container_home}>
       <div className={styles.home}>
         <div className={styles.container_title}>
           <h1>
-            <span>Hola</span>
+            <span className={styles.home__textSaludo}>Hola, </span>
+            soy
             <br />
-            soy Andrés Fernando Jaramillo Avila
+            Andrés Jaramillo
             <br />
-            Ingeniero de sistemas / Desarrollador web front end
+            <span ref={variableText} className={styles.home__variableText}>
+              Ingeniero de sistemas
+            </span>
           </h1>
           <div className={styles.btn_saluda}>
             Saluda
