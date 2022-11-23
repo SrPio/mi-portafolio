@@ -76,3 +76,33 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* Móvil */
+@media screen and (max-width: 1024px) {
+
+    .container_botones_left {
+        display: none;
+    }
+
+    .btn_downloadCV {
+        width: 148px;
+        height: 33.9px;
+        padding: 9px 0px 9px 12px;
+
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .btn_downloadCV>img {
+        margin-right: 5px;
+        height: 14px;
+    }
+
+    .container_botones_right {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+}

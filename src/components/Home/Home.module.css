@@ -158,3 +158,99 @@
     /* background-color: #5A48D0;
     color: #FFFFFF; */
 }
+
+
+
+
+
+
+
+/* Móvil */
+@media screen and (max-width: 1024px) {
+    .home {
+
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+    }
+
+    .container_title {
+        width: 100%;
+        order: 2;
+        background-color: #fff;
+        z-index: 3;
+    }
+
+    .container_title>h1 {
+        font-size: 35px;
+        width: 320px;
+
+    }
+
+    .container_pic {
+        width: 300px;
+        height: 355px;
+        order: 1;
+    }
+
+    .pic {
+
+        width: 100%;
+
+    }
+
+    .back_pic {
+        width: 100%;
+    }
+
+    .glass_html {
+        top: 123px;
+        right: 43px;
+        width: 68.83px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .glass_js {
+        top: 165px;
+        right: 209px;
+        width: 35.82px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .glass_css {
+        top: 245px;
+        right: 208px;
+        width: 68.83px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .glass_react {
+        top: 274px;
+        right: 34px;
+        width: 46.35px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .btn_saluda {
+        height: 53.58px;
+        width: 100%;
+    }
+
+}
