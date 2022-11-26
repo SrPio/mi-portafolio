@@ -127,6 +127,7 @@
     .aboutMe {
         height: auto;
         padding: 0 20px;
+        /* overflow-x: hidden; */
     }
 
     .container_info {
@@ -164,7 +165,8 @@
 
     .rectangle_title>img {
 
-        height: 279px;
+        /* height: max(50vw, 50px); */
+        height: min(60vw, 300px);
 
     }
 
@@ -192,6 +194,7 @@
 
     .rectangle_title>img {
         top: 13px;
+        left: min(-10vw, -40px);
     }
 
 
