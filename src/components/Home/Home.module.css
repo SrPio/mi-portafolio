@@ -249,8 +249,9 @@
     }
 
     .btn_saluda {
-        height: 53.58px;
         width: 100%;
+        height: auto;
+        padding: 18px 0;
     }
 
 }

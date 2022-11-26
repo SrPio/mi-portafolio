@@ -122,10 +122,108 @@
     margin-left: 5px;
 }
 
+
+.contanier_mobile_btns {
+    display: none;
+}
+
 .footer {
 
     margin-top: 100px;
     height: 30px;
     width: 100%;
     background: #2D2468;
+}
+
+
+/* Móvil */
+@media screen and (max-width: 1024px) {
+    .contact {
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .container_info_contact {
+        max-width: 560px;
+        border-radius: 12px;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+    }
+
+    .container_networks {
+        display: none;
+    }
+
+    .contact_form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        width: 100%;
+
+
+    }
+
+    .container_info_contact>form>h1 {
+        margin: 20px 0 20px;
+        font-size: min(7vw, 36px);
+    }
+
+    .btn_send_contact {
+        width: 100%;
+        height: auto;
+        padding: 18px 0;
+        margin-bottom: 36px;
+    }
+
+    .contanier_mobile_btns {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contanier_mobile_btns>button {
+        width: 100%;
+        height: auto;
+        padding: 18px 0;
+        border: 0;
+        font-family: 'SF UI Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+    }
+
+    .contanier_mobile_btns img {
+        height: 25px;
+        width: 25px;
+
+        margin-right: 12px;
+    }
+
+    .btn_linkedin {
+        background: #0961B8;
+    }
+
+    .btn_github {
+        background: #24292D;
+    }
 }

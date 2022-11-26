@@ -56,7 +56,7 @@
 @media screen and (max-width: 1024px) {
 
     .education {
-        padding: 15vw 20px;
+        padding: 15vw min(7vw, 80px);
         /* margin-top: 35px; */
         height: auto;
 

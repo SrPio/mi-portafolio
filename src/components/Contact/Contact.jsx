@@ -34,15 +34,25 @@ function Contact() {
             </div>
             <button className={styles.btn_send_contact}>Enviar</button>
           </form>
+          <div className={styles.contanier_mobile_btns}>
+            <button className={styles.btn_linkedin}>
+              <img src="/assets/linkedin-icon.svg" alt="icon" />
+              Contáctame por Linkedin
+            </button>
+            <button className={styles.btn_github}>
+              <img src="/assets/github-icon.svg" alt="icon" />
+              Contáctame por GitHub
+            </button>
+          </div>
           <div className={styles.container_networks}>
             <img
               src="/assets/linkedin-icon.svg"
-              alt=""
+              alt="icon"
               className={styles.icon_linkedin}
             />
             <img
               src="/assets/github-icon.svg"
-              alt=""
+              alt="icon"
               className={styles.icon_github}
             />
           </div>
