@@ -119,3 +119,80 @@
     margin-right: 10px;
     height: 14px;
 }
+
+
+/* Móvil */
+@media screen and (max-width: 1024px) {
+
+    .aboutMe {
+        height: auto;
+        padding: 0 20px;
+    }
+
+    .container_info {
+        flex-direction: column;
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        padding: 54px 20px 20px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+    }
+
+    .pic_section,
+    .info_section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .info_section {
+        margin: 120px 0 20px;
+    }
+
+    .rectangle_title {
+        width: 197.07px;
+        height: 233.96px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+    }
+
+    .rectangle_title>img {
+
+        height: 279px;
+
+    }
+
+    .rectangle_title>h1 {
+        top: 17px;
+        left: 18px;
+        font-size: 1.5rem;
+    }
+
+    .info_section>p {
+
+        font-size: 1rem;
+        line-height: 21px;
+
+
+        color: #FFFFFF;
+    }
+
+    .btn_downloadCV {
+        position: static;
+        margin: 0 auto;
+        width: 100%;
+        height: 53px;
+    }
+
+    .rectangle_title>img {
+        top: 13px;
+    }
+
+
+}
