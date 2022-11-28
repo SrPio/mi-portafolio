@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./AboutMe.module.css";
 
+import { motion } from "framer-motion";
+
 function AboutMe() {
   return (
     <div id="aboutMe" className={styles.container_aboutMe}>
@@ -9,11 +11,22 @@ function AboutMe() {
           <div className={styles.pic_section}>
             <div className={styles.rectangle_title}>
               <h1 className={styles.title}>Sobre Mí</h1>
-              <img src="/assets/aboutme-pic.png" alt="" />
+              <motion.img
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                loading="lazy"
+                src="/assets/aboutme-picTINY.png"
+                alt=""
+              />
             </div>
           </div>
           <div className={styles.info_section}>
-            <p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+            >
               Ingeniero de Sistemas y Desarrollador Web Front-End, con
               conocimientos en la creación y desarrollo de aplicaciones y sitios
               web usando tecnologías como HTML, CSS, Sass, JavaScript y React.
@@ -27,10 +40,10 @@ function AboutMe() {
               profundizar mis conocimientos en Adobe XD y Figma. En pocas
               palabras puedo ser un UX/UI con fuertes habilidades técnicas
               Front-End, o un Front- End con avanzados conocimientos UX/UI.
-            </p>
+            </motion.p>
           </div>
           <button className={styles.btn_downloadCV}>
-            <img src="/assets/download-icon.svg" alt="" />
+            <img loading="lazy" src="/assets/download-icon.svg" alt="" />
             Descargar mi CV
           </button>
         </div>

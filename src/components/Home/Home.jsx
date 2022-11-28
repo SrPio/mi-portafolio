@@ -3,6 +3,8 @@ import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
+import { motion } from "framer-motion";
+
 function Home() {
   const variableText = useRef(null);
 
@@ -46,27 +48,111 @@ function Home() {
           </h1>
           <div className={styles.btn_saluda}>
             Saluda
-            <img src="" alt="" />
+            <img loading="lazy" src="" alt="" />
           </div>
         </div>
         <div className={styles.container_pic}>
           <div>
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                default: {
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                },
+                scale: {
+                  type: "spring",
+                  damping: 3,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              drag
+              dragConstraints={{
+                top: -50,
+                left: -50,
+                right: 50,
+                bottom: 50,
+              }}
               className={styles.glass_html}
               src="/assets/html-glass.svg"
               alt=""
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                default: {
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                },
+                scale: {
+                  type: "spring",
+                  damping: 3,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              drag
+              dragConstraints={{
+                top: -50,
+                left: -50,
+                right: 50,
+                bottom: 50,
+              }}
               className={styles.glass_js}
               src="/assets/js-glass.svg"
               alt=""
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                default: {
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                },
+                scale: {
+                  type: "spring",
+                  damping: 3,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              drag
+              dragConstraints={{
+                top: -50,
+                left: -50,
+                right: 50,
+                bottom: 50,
+              }}
               className={styles.glass_css}
               src="/assets/css-glass.svg"
               alt=""
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                default: {
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                },
+                scale: {
+                  type: "spring",
+                  damping: 3,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              drag
+              dragConstraints={{
+                top: -50,
+                left: -50,
+                right: 50,
+                bottom: 50,
+              }}
               className={styles.glass_react}
               src="/assets/react-glass.svg"
               alt=""
@@ -76,7 +162,19 @@ function Home() {
               src="/assets/back-pic-home.svg"
               alt=""
             />
-            <img className={styles.pic} src="/assets/home-pic.png" alt="" />
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className={styles.pic}
+              src="/assets/home-picTINY.png"
+              alt=""
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

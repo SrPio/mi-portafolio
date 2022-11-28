@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Contact.module.css";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
@@ -36,21 +37,27 @@ function Contact() {
           </form>
           <div className={styles.contanier_mobile_btns}>
             <button className={styles.btn_linkedin}>
-              <img src="/assets/linkedin-icon.svg" alt="icon" />
+              <img loading="lazy" src="/assets/linkedin-icon.svg" alt="icon" />
               Contáctame por Linkedin
             </button>
             <button className={styles.btn_github}>
-              <img src="/assets/github-icon.svg" alt="icon" />
+              <img loading="lazy" src="/assets/github-icon.svg" alt="icon" />
               Contáctame por GitHub
             </button>
           </div>
           <div className={styles.container_networks}>
-            <img
+            <motion.img
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              loading="lazy"
               src="/assets/linkedin-icon.svg"
               alt="icon"
               className={styles.icon_linkedin}
             />
-            <img
+            <motion.img
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              loading="lazy"
               src="/assets/github-icon.svg"
               alt="icon"
               className={styles.icon_github}

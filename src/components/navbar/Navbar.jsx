@@ -26,9 +26,9 @@ function Navbar() {
         </a>
       </div>
       <div className={styles.container_botones_right}>
-        <img src="/assets/moon-icon.svg" alt="" />
+        <img loading="lazy" src="/assets/moon-icon.svg" alt="" />
         <div className={styles.btn_downloadCV}>
-          <img src="/assets/download-icon.svg" alt="" />
+          <img loading="lazy" src="/assets/download-icon.svg" alt="" />
           Descargar mi CV
         </div>
       </div>

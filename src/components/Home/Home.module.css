@@ -103,12 +103,24 @@
     right: 100px;
     z-index: 3;
     width: 160px;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
     backdrop-filter: blur(20px);
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+}
+
+
+.glass_html:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
 }
 
 .glass_js {
@@ -117,6 +129,11 @@
     right: 460px;
     z-index: 3;
     width: 80px;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
     backdrop-filter: blur(20px);
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -125,12 +142,24 @@
     -o-border-radius: 10px;
 }
 
+.glass_js:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+
 .glass_css {
     position: absolute;
     top: 450px;
     right: 460px;
     z-index: 3;
     width: 150px;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
     backdrop-filter: blur(20px);
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -139,12 +168,24 @@
     -o-border-radius: 25px;
 }
 
+.glass_css:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+
 .glass_react {
     position: absolute;
     top: 530px;
     right: 110px;
     z-index: 2;
     width: 100px;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -152,6 +193,13 @@
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+
+.glass_react:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
 
 .home__variableText {
     font-size: 25px;
