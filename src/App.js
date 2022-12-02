@@ -6,15 +6,24 @@ import Home from './components/Home/Home';
 import Navbar from './components/navbar/Navbar';
 import Projects from './components/Projects/Projects';
 
+import { useState } from "react";
+
 function App() {
+
+  const [isDarkMode, setIsdarkMode] = useState(false);
+
+  const manejoDarkMode = () => {
+    setIsdarkMode(!isDarkMode);
+  };
+
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <AboutMe />
-      <Education />
-      <Projects />
-      <Contact />
+      <Navbar isDarkMode={isDarkMode} manejoDarkMode={manejoDarkMode} />
+      <Home isDarkMode={isDarkMode} />
+      <AboutMe isDarkMode={isDarkMode} />
+      <Education isDarkMode={isDarkMode} />
+      <Projects isDarkMode={isDarkMode} />
+      <Contact isDarkMode={isDarkMode} />
     </div>
   );
 }

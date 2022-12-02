@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 
-function Home() {
+function Home({ isDarkMode }) {
   const variableText = useRef(null);
 
   useEffect(() => {
@@ -33,9 +33,16 @@ function Home() {
   }, []);
 
   return (
-    <div id="home" className={styles.container_home}>
+    <div
+      id="home"
+      className={`${isDarkMode ? styles.dark : ""} ${styles.container_home}`}
+    >
       <div className={styles.home}>
-        <div className={styles.container_title}>
+        <div
+          className={`${isDarkMode ? styles.dark : ""} ${
+            styles.container_title
+          }`}
+        >
           <h1>
             <span className={styles.home__textSaludo}>Hola, </span>
             soy
@@ -159,7 +166,11 @@ function Home() {
             />
             <img
               className={styles.back_pic}
-              src="/assets/back-pic-home.svg"
+              src={`${
+                isDarkMode
+                  ? "/assets/back-pic-home-dark.svg"
+                  : "/assets/back-pic-home.svg"
+              }`}
               alt=""
             />
             <motion.img

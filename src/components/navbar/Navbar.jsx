@@ -2,13 +2,19 @@ import React from "react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import styles from "./Navbar.module.css";
 
-function Navbar() {
+function Navbar({ isDarkMode, manejoDarkMode }) {
   return (
     <div
-      className={`${useScrollPosition() > 0 ? styles.shadow : ""} 
+      className={`${useScrollPosition() > 0 ? styles.shadow : ""} ${
+        isDarkMode ? styles.dark : ""
+      }
       ${styles.navbar}`}
     >
-      <div className={styles.container_botones_left}>
+      <div
+        className={`${isDarkMode ? styles.dark : ""} ${
+          styles.container_botones_left
+        }`}
+      >
         <a href="#home" className={styles.link_sections}>
           Inicio
         </a>
@@ -26,8 +32,20 @@ function Navbar() {
         </a>
       </div>
       <div className={styles.container_botones_right}>
-        <img loading="lazy" src="/assets/moon-icon.svg" alt="" />
-        <div className={styles.btn_downloadCV}>
+        <button onClick={manejoDarkMode}>
+          <img
+            loading="lazy"
+            src={`${
+              isDarkMode ? "/assets/sun-icon.svg" : "/assets/moon-icon.svg"
+            }`}
+            alt=""
+          />
+        </button>
+        <div
+          className={`${isDarkMode ? styles.dark : ""} ${
+            styles.btn_downloadCV
+          }`}
+        >
           <img loading="lazy" src="/assets/download-icon.svg" alt="" />
           Descargar mi CV
         </div>
