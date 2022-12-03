@@ -3,14 +3,29 @@ import styles from "./AboutMe.module.css";
 
 import { motion } from "framer-motion";
 
-function AboutMe() {
+function AboutMe({ isDarkMode }) {
   return (
-    <div id="aboutMe" className={styles.container_aboutMe}>
+    <div
+      id="aboutMe"
+      className={`${isDarkMode ? styles.dark : ""} ${styles.container_aboutMe}`}
+    >
       <div className={styles.aboutMe}>
-        <div className={styles.container_info}>
+        <div
+          className={`${isDarkMode ? styles.dark : ""} ${
+            styles.container_info
+          }`}
+        >
           <div className={styles.pic_section}>
-            <div className={styles.rectangle_title}>
-              <h1 className={styles.title}>Sobre Mí</h1>
+            <div
+              className={`${isDarkMode ? styles.dark : ""} ${
+                styles.rectangle_title
+              }`}
+            >
+              <h1
+                className={`${isDarkMode ? styles.dark : ""} ${styles.title}`}
+              >
+                Sobre Mí
+              </h1>
               <motion.img
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -42,7 +57,11 @@ function AboutMe() {
               Front-End, o un Front- End con avanzados conocimientos UX/UI.
             </motion.p>
           </div>
-          <button className={styles.btn_downloadCV}>
+          <button
+            className={`${isDarkMode ? styles.dark : ""} ${
+              styles.btn_downloadCV
+            }`}
+          >
             <img loading="lazy" src="/assets/download-icon.svg" alt="" />
             Descargar mi CV
           </button>

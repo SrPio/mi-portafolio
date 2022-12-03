@@ -232,6 +232,24 @@
         order: 2;
         background-color: #fff;
         z-index: 3;
+
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+        -ms-transition: background-color 0.5s ease;
+        -o-transition: background-color 0.5s ease;
+    }
+
+    .dark.container_title {
+
+        background-color: #01040D;
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+        -ms-transition: background-color 0.5s ease;
+        -o-transition: background-color 0.5s ease;
+
+
     }
 
     .container_title>h1 {
@@ -320,7 +338,8 @@
     -o-transition: background-color 0.5s ease;
 }
 
-.dark.container_title {
+
+h1.dark {
     color: #FFFFFF;
     transition: color 0.5s ease;
     -webkit-transition: color 0.5s ease;

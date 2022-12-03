@@ -2,12 +2,24 @@ import React from "react";
 import styles from "./Contact.module.css";
 import { motion } from "framer-motion";
 
-function Contact() {
+function Contact({ isDarkMode }) {
   return (
-    <div id="contact" className={styles.container_contact}>
+    <div
+      id="contact"
+      className={`${isDarkMode ? styles.dark : ""} ${styles.container_contact}`}
+    >
       <div className={styles.contact}>
-        <div className={styles.container_info_contact}>
-          <form className={styles.contact_form} action="">
+        <div
+          className={`${isDarkMode ? styles.dark : ""} ${
+            styles.container_info_contact
+          }`}
+        >
+          <form
+            className={`${isDarkMode ? styles.dark : ""} ${
+              styles.contact_form
+            }`}
+            action=""
+          >
             <h1>¡Trabajemos juntos!</h1>
             <div className={styles.form_gruop}>
               <label htmlFor="">Nombre</label>
@@ -65,7 +77,9 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className={styles.footer}></div>
+      <div
+        className={`${isDarkMode ? styles.dark : ""} ${styles.footer}`}
+      ></div>
     </div>
   );
 }

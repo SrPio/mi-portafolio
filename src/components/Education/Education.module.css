@@ -1,6 +1,14 @@
 .education_container {
     display: flex;
     justify-content: center;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+
+
 }
 
 .education {
@@ -9,6 +17,12 @@
     padding: 0 100px 0 100px;
     width: 100%;
     max-width: 1600px;
+
+    transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 
 }
 
@@ -95,4 +109,28 @@
     .container_item {
         margin-top: 7vw;
     }
+}
+
+
+
+/* Dark mode */
+
+.dark.education_container {
+    background-color: #01040D;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+
+
+}
+
+.dark.education {
+    color: #FFFFFF;
+    transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }

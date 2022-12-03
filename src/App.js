@@ -6,18 +6,30 @@ import Home from './components/Home/Home';
 import Navbar from './components/navbar/Navbar';
 import Projects from './components/Projects/Projects';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 
   const [isDarkMode, setIsdarkMode] = useState(false);
+
+  useEffect(() => {
+
+    //detectar el tema del sistema (claro u oscuro)
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // dark mode
+      setIsdarkMode(true)
+    }
+  }, [])
+
+
 
   const manejoDarkMode = () => {
     setIsdarkMode(!isDarkMode);
   };
 
   return (
-    <div className="App">
+    <div className={`${isDarkMode ? "dark" : ""} ${"App"
+      }`}>
       <Navbar isDarkMode={isDarkMode} manejoDarkMode={manejoDarkMode} />
       <Home isDarkMode={isDarkMode} />
       <AboutMe isDarkMode={isDarkMode} />

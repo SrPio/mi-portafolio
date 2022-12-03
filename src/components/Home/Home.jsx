@@ -43,7 +43,7 @@ function Home({ isDarkMode }) {
             styles.container_title
           }`}
         >
-          <h1>
+          <h1 className={`${isDarkMode ? styles.dark : ""}`}>
             <span className={styles.home__textSaludo}>Hola, </span>
             soy
             <br />

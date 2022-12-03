@@ -3,10 +3,15 @@ import styles from "./Education.module.css";
 
 import { motion } from "framer-motion";
 
-function Education() {
+function Education({ isDarkMode }) {
   return (
-    <div id="education" className={styles.education_container}>
-      <div className={styles.education}>
+    <div
+      id="education"
+      className={`${isDarkMode ? styles.dark : ""} ${
+        styles.education_container
+      }`}
+    >
+      <div className={`${isDarkMode ? styles.dark : ""} ${styles.education}`}>
         <h1>Educación</h1>
         <div className={styles.container_item}>
           <motion.div

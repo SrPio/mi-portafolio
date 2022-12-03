@@ -2,6 +2,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 }
 
 .aboutMe {
@@ -161,6 +167,14 @@
         -moz-border-radius: 12px;
         -ms-border-radius: 12px;
         -o-border-radius: 12px;
+
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+        -ms-transition: background-color 0.5s ease;
+        -o-transition: background-color 0.5s ease;
+
+
     }
 
     .rectangle_title>img {
@@ -174,6 +188,12 @@
         top: 17px;
         left: 18px;
         font-size: 1.5rem;
+
+        transition: color 0.5s ease;
+        -webkit-transition: color 0.5s ease;
+        -moz-transition: color 0.5s ease;
+        -ms-transition: color 0.5s ease;
+        -o-transition: color 0.5s ease;
     }
 
     .info_section>p {
@@ -190,6 +210,12 @@
         width: 100%;
         height: auto;
         padding: 18px 0;
+
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+        -ms-transition: background-color 0.5s ease;
+        -o-transition: background-color 0.5s ease;
     }
 
     .rectangle_title>img {
@@ -198,4 +224,54 @@
     }
 
 
+}
+
+
+/* Dark mode */
+
+.dark.container_aboutMe {
+    background-color: #01040D;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+}
+
+.dark.container_info {
+    background: #1B1B28;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+}
+
+.dark.rectangle_title {
+    background: #31313D;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+
+
+}
+
+.dark.title {
+    color: #FFFFFF;
+    transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+}
+
+.dark.btn_downloadCV {
+    background: #6C5CD5;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 }

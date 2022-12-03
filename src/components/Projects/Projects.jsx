@@ -3,12 +3,19 @@ import styles from "./Projects.module.css";
 
 import { motion } from "framer-motion";
 
-function Projects() {
+function Projects({ isDarkMode }) {
   return (
-    <div id="projects" className={styles.container_project}>
+    <div
+      id="projects"
+      className={`${isDarkMode ? styles.dark : ""} ${styles.container_project}`}
+    >
       <div className={styles.project}>
-        <div className={styles.container_info_project}>
-          <h1>Mis Proyectos</h1>
+        <div
+          className={`${isDarkMode ? styles.dark : ""} ${
+            styles.container_info_project
+          }`}
+        >
+          <h1 className={`${isDarkMode ? styles.dark : ""}`}>Mis Proyectos</h1>
           <div className={styles.container_items}>
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}

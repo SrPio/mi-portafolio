@@ -2,7 +2,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    padding-top: 100px;
+
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 
 }
 
@@ -26,6 +33,12 @@
     display: flex;
     justify-content: center;
     padding: 20px 30px;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 }
 
 .contact_form {
@@ -33,11 +46,17 @@
     flex-direction: column;
     margin-right: 20px;
     width: 70%;
+
+
+    transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 
 .container_info_contact>form>h1 {
     margin: 20px 0 20px;
-
 }
 
 .input_contact,
@@ -58,6 +77,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: 57px;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 }
 
 .input_area {
@@ -133,6 +158,12 @@
     height: 30px;
     width: 100%;
     background: #2D2468;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 }
 
 
@@ -226,4 +257,59 @@
     .btn_github {
         background: #24292D;
     }
+}
+
+
+
+/* Dark mode */
+
+.dark.container_contact {
+    background-color: #01040D;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+}
+
+.dark.container_info_contact {
+    background: #1B1B28;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+}
+
+.dark.contact_form {
+    color: #FFFFFF;
+    transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+}
+
+
+.dark.contact_form .input_contact,
+.dark.contact_form .input_area {
+    border: none;
+    background: #31313D;
+    color: #C1C1C1;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+}
+
+.dark.footer {
+    background: #1B1B28;
+
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
 }
