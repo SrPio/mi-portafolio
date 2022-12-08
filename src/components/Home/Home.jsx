@@ -172,8 +172,8 @@ function Home({ isDarkMode }) {
               alt=""
             />
             <motion.img
-              initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
-              animate={{ opacity: 1, scale: 1, x: 80, y: 30 }}
+              initial={{ opacity: 0, scale: 0.5, x: 50, y: 0 }}
+              animate={{ opacity: 1, scale: 1, x: -30, y: 30 }}
               transition={{
                 default: {
                   duration: 0.3,
@@ -181,7 +181,7 @@ function Home({ isDarkMode }) {
                 },
                 x: {
                   duration: 4,
-                  ease: [0.17, 0.67, 0.83, 0.67],
+                  ease: [0.17, 0.67, 0.83, 0.87],
                   yoyo: Infinity,
                 },
                 y: {
