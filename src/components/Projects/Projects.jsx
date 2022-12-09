@@ -33,9 +33,16 @@ function Projects({ isDarkMode }) {
               transition={{
                 delay: 1.0,
               }}
-              className={styles.items}
+              className={`${styles.items} ${styles.items2}`}
             >
-              <img loading="lazy" src="/assets/project-002.png" alt="" />
+              <div className={styles.badge__items}>
+                <h3>HTML</h3>
+                <h3>CSS</h3>
+                <h3>JAVASCRIPT</h3>
+                <h3>REACT</h3>
+              </div>
+              <h2>Peliculas-app</h2>
+              <h2>Demo</h2>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
