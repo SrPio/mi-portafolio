@@ -43,7 +43,9 @@
 }
 
 .container_title {
-    width: 600px;
+    min-width: 285px;
+    width: 29vw;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     flex-direction: column;
