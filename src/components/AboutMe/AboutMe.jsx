@@ -61,6 +61,12 @@ function AboutMe({ isDarkMode }) {
             className={`${isDarkMode ? styles.dark : ""} ${
               styles.btn_downloadCV
             }`}
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/11JDgW_340GgoXqm0S92IKmv-teOmG5PX/view?usp=sharing",
+                "_blank"
+              )
+            }
           >
             <img loading="lazy" src="/assets/download-icon.svg" alt="" />
             Descargar mi CV

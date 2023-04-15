@@ -53,10 +53,10 @@ function Home({ isDarkMode }) {
               Ingeniero de sistemas
             </span>
           </h1>
-          <div className={styles.btn_saluda}>
+          <a href="#contact" className={styles.btn_saluda}>
             Saluda
             <img loading="lazy" src="" alt="" />
-          </div>
+          </a>
         </div>
         <div className={styles.container_pic}>
           <div>
