@@ -55,6 +55,18 @@
     -o-transition: color 0.5s ease;
 }
 
+
+.form__submitted__text {
+    align-self: center;
+
+    margin: auto 0;
+
+    font-size: min(7vw, 36px);
+
+    padding: 30px 0;
+    text-align: center;
+}
+
 .container_info_contact>form>h1 {
     margin: 20px 0 20px;
 }
