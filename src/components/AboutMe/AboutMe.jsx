@@ -1,12 +1,32 @@
 import React from "react";
 import styles from "./AboutMe.module.css";
 
+import { useEffect, useRef } from "react";
+
 import { motion } from "framer-motion";
 
-function AboutMe({ isDarkMode }) {
+function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    if (!isScrollChange) {
+      const handleScroll = () => {
+        const { top } = containerRef.current.getBoundingClientRect();
+        if (top < window.innerHeight / 2) {
+          changeIconSelected("persona");
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [changeIconSelected]);
   return (
     <div
       id="aboutMe"
+      ref={containerRef}
       className={`${isDarkMode ? styles.dark : ""} ${styles.container_aboutMe}`}
     >
       <div className={styles.aboutMe}>
@@ -42,19 +62,16 @@ function AboutMe({ isDarkMode }) {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              Ingeniero de Sistemas y Desarrollador Web Front-End, con
-              conocimientos en la creación y desarrollo de aplicaciones y sitios
-              web usando tecnologías como HTML, CSS, Sass, JavaScript y React.
-              Así mismo con experiencia en el uso de softwares de diseño,
-              maquetación y prototipado como Adobe XD y Figma; además, de
-              tecnologías de control de versiones y trabajo colaborativo (GIT).
-              Soy un desarrollador Front-End que programa experiencias
-              inspiradas en los principios UX/UI. Además, me caracterizo por
-              tener una obsesión al detalle al momento de diseñar, maquetar y
-              programar la experiencia visual del usuario, esto me ha llevado a
-              profundizar mis conocimientos en Adobe XD y Figma. En pocas
-              palabras puedo ser un UX/UI con fuertes habilidades técnicas
-              Front-End, o un Front- End con avanzados conocimientos UX/UI.
+              Soy Ingeniero de Sistemas y Desarrollador Web Front-End
+              especializado en crear aplicaciones y sitios web cautivadores. Con
+              sólidos conocimientos en HTML, CSS, Sass, JavaScript y React,
+              puedo transformar tus ideas en una experiencia digital impactante.
+              Mi obsesión por los detalles y mi enfoque en la experiencia visual
+              del usuario garantizan resultados impresionantes. Además, estoy
+              versado en herramientas como Adobe XD, Figma y GIT para llevar la
+              colaboración y la eficiencia al máximo. Si buscas un experto en
+              desarrollo Front-End con habilidades UX/UI excepcionales,
+              ¡Contáctame!
             </motion.p>
           </div>
           <button

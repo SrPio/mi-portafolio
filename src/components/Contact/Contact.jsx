@@ -3,7 +3,28 @@ import styles from "./Contact.module.css";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 
-function Contact({ isDarkMode }) {
+import { useEffect, useRef } from "react";
+
+function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isScrollChange) {
+      const handleScroll = () => {
+        const { top } = containerRef.current.getBoundingClientRect();
+        if (top < window.innerHeight / 2) {
+          changeIconSelected("café");
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [changeIconSelected]);
+
   const [state, handleSubmit] = useForm("mgebpbwa");
   if (state.succeeded) {
     return (
@@ -94,6 +115,7 @@ function Contact({ isDarkMode }) {
   return (
     <div
       id="contact"
+      ref={containerRef}
       className={`${isDarkMode ? styles.dark : ""} ${styles.container_contact}`}
     >
       <div className={styles.contact}>

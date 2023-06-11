@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 
-function Home({ isDarkMode }) {
+function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
   const variableText = useRef(null);
 
   useEffect(() => {
@@ -32,9 +32,28 @@ function Home({ isDarkMode }) {
     };
   }, []);
 
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isScrollChange) {
+      const handleScroll = () => {
+        const { top } = containerRef.current.getBoundingClientRect();
+        if (top < window.innerHeight / 2) {
+          changeIconSelected("casa");
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [changeIconSelected]);
   return (
     <div
       id="home"
+      ref={containerRef}
       className={`${isDarkMode ? styles.dark : ""} ${styles.container_home}`}
     >
       <div className={styles.home}>

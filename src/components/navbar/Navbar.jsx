@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import styles from "./Navbar.module.css";
 
-function Navbar({ isDarkMode, manejoDarkMode }) {
+function Navbar({ isDarkMode, manejoDarkMode, handleClick, selectedIcon }) {
   return (
     <div
       className={`${useScrollPosition() > 0 ? styles.shadow : ""} ${
@@ -22,7 +22,7 @@ function Navbar({ isDarkMode, manejoDarkMode }) {
           Sobre mí
         </a>
         <a href="#education" className={styles.link_sections}>
-          Eduación
+          Trayectoria
         </a>
         <a href="#projects" className={styles.link_sections}>
           Proyectos
@@ -54,6 +54,49 @@ function Navbar({ isDarkMode, manejoDarkMode }) {
         >
           <img loading="lazy" src="/assets/download-icon.svg" alt="" />
           Descargar mi CV
+        </div>
+      </div>
+
+      <div className={`${isDarkMode ? styles.dark : ""} ${styles.nav_mobile}`}>
+        <div
+          className={`${
+            selectedIcon === "casa" ? styles.nav_mobileClicked : ""
+          }`}
+          onClick={() => handleClick("casa")}
+        >
+          <img src="/assets/ic_fluent_home_28_regular.svg" alt="icono casa" />
+        </div>
+        <div
+          className={`${
+            selectedIcon === "persona" ? styles.nav_mobileClicked : ""
+          }`}
+          onClick={() => handleClick("persona")}
+        >
+          <img src="/assets/people-icon.svg" alt="icono persona" />
+        </div>
+        <div
+          className={`${
+            selectedIcon === "libro" ? styles.nav_mobileClicked : ""
+          }`}
+          onClick={() => handleClick("libro")}
+        >
+          <img src="/assets/book-icon.svg" alt="icono libro" />
+        </div>
+        <div
+          className={`${
+            selectedIcon === "cuadros" ? styles.nav_mobileClicked : ""
+          }`}
+          onClick={() => handleClick("cuadros")}
+        >
+          <img src="/assets/cuadros-icon.svg" alt="icono cuadros" />
+        </div>
+        <div
+          className={`${
+            selectedIcon === "café" ? styles.nav_mobileClicked : ""
+          }`}
+          onClick={() => handleClick("café")}
+        >
+          <img src="/assets/coffe-icon.svg" alt="icono café" />
         </div>
       </div>
     </div>

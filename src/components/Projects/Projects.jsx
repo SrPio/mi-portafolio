@@ -1,12 +1,32 @@
 import React from "react";
 import styles from "./Projects.module.css";
+import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 
-function Projects({ isDarkMode }) {
+function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isScrollChange) {
+      const handleScroll = () => {
+        const { top } = containerRef.current.getBoundingClientRect();
+        if (top < window.innerHeight / 2) {
+          changeIconSelected("cuadros");
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [changeIconSelected]);
   return (
     <div
       id="projects"
+      ref={containerRef}
       className={`${isDarkMode ? styles.dark : ""} ${styles.container_project}`}
     >
       <div className={styles.project}>
