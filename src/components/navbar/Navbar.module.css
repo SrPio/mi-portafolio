@@ -76,7 +76,7 @@ button {}
     -o-border-radius: 7px;
     font-family: 'SF UI Display';
     font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 14px;
     line-height: 29px;
     display: flex;
@@ -95,7 +95,7 @@ button {}
     border: 0;
     font-family: 'SF UI Display';
     font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 1rem;
     line-height: 38px;
 

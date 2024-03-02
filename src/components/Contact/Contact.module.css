@@ -134,7 +134,7 @@
     -o-border-radius: 7px;
     font-family: 'SF UI Display';
     font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 18px;
     line-height: 29px;
     display: flex;
@@ -239,7 +239,7 @@
         border: 0;
         font-family: 'SF UI Display';
         font-style: normal;
-        font-weight: 700;
+        /* font-weight: 700; */
         font-size: 18px;
         line-height: 29px;
         display: flex;

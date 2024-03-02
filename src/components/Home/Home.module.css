@@ -19,7 +19,7 @@
 
     font-family: 'SF UI Display';
     font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: #22292F;
 
     max-width: 1600px;
@@ -59,6 +59,8 @@
 }
 
 .container_title>h1 {
+    font-family: 'SF UI Display';
+    font-weight: unset;
     font-size: 35px;
     width: 100%;
 }
@@ -76,7 +78,7 @@
     -o-border-radius: 7px;
     font-family: 'SF UI Display';
     font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 18px;
     line-height: 29px;
     display: flex;
