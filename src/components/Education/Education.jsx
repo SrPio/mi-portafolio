@@ -106,7 +106,7 @@ function Education({ isDarkMode, changeIconSelected, isScrollChange }) {
             transition={{ delay: 0.8 }}
             className={styles.item_text}
           >
-            <p className={styles.item_date}>2022 - Actualidad...</p>
+            <p className={styles.item_date}>2022 - 2024</p>
             <h2 className={styles.item_title}>FRONTEND DEVELOPER</h2>
             <p className={styles.item_institution}>PROtalento</p>
           </motion.div>
