@@ -47,7 +47,7 @@ function Navbar({ isDarkMode, manejoDarkMode, handleClick, selectedIcon }) {
           }`}
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/18I3QYr7YX6nUhfZyOFEfKalsiUKZbc8o/view?usp=sharing",
+              "https://drive.google.com/file/d/16PMBwGfb1hAPIarbvRKCyR_dSTYV6dcv/view?usp=sharing",
               "_blank"
             )
           }

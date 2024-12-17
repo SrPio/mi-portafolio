@@ -111,6 +111,35 @@ function Education({ isDarkMode, changeIconSelected, isScrollChange }) {
             <p className={styles.item_institution}>PROtalento</p>
           </motion.div>
         </div>
+        <div className={styles.container_item}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            /* transition={{ delay: 0.5 }} */
+            className={styles.container_img}
+          >
+            <img
+              loading="lazy"
+              src="/assets/maletin.svg"
+              alt="work icon"
+              className={styles.item_img}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className={styles.item_text}
+          >
+            <p className={styles.item_date}>2024 - 2024</p>
+            <h2 className={styles.item_title}>
+              ING. DESARROLLADOR FRONTEND
+            </h2>
+            <p className={styles.item_institution}>
+              B&B HOLDING MEDELLÍN S.A.S
+            </p>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
