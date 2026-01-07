@@ -70,7 +70,7 @@ function Navbar({ isDarkMode, manejoDarkMode, handleClick, selectedIcon }) {
           }`}
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/16PMBwGfb1hAPIarbvRKCyR_dSTYV6dcv/view?usp=sharing",
+              "https://drive.google.com/file/d/1Uuoc7WKvAuqxcT6lpq-5pqriv0E6bj7m/view?usp=sharing",
               "_blank"
             )
           }
