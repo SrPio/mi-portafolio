@@ -156,7 +156,7 @@
 }
 
 .items1 {
-    background: url('../../../public/assets/project-001.png') center center no-repeat;
+    background: url('/assets/project-001.png') center center no-repeat;
     background-size: 700px;
 
 
@@ -176,7 +176,7 @@
 
 .items1:hover {
 
-    background: url('../../../public/assets/project-001.png') left center no-repeat;
+    background: url('/assets/project-001.png') left center no-repeat;
     background-size: 800px;
 
 
@@ -188,7 +188,7 @@
 }
 
 .items2 {
-    background: url('../../../public/assets/project-002.png') center center no-repeat;
+    background: url('/assets/project-002.png') center center no-repeat;
     background-size: 700px;
 
 
@@ -209,7 +209,7 @@
 
 .items2:hover {
 
-    background: url('../../../public/assets/project-002.png') left center no-repeat;
+    background: url('/assets/project-002.png') left center no-repeat;
     background-size: 800px;
 
 
@@ -221,7 +221,7 @@
 }
 
 .items3 {
-    background: url('../../../public/assets/project-003.png') center center no-repeat;
+    background: url('/assets/project-003.png') center center no-repeat;
     background-size: 700px;
 
 
@@ -242,7 +242,7 @@
 
 .items3:hover {
 
-    background: url('../../../public/assets/project-003.png') left center no-repeat;
+    background: url('/assets/project-003.png') left center no-repeat;
     background-size: 800px;
 
 
@@ -255,7 +255,7 @@
 
 
 .items4 {
-    background: url('../../../public/assets/project-004.png') center center no-repeat;
+    background: url('/assets/project-004.png') center center no-repeat;
     background-size: 700px;
 
 
@@ -276,7 +276,7 @@
 
 .items4:hover {
 
-    background: url('../../../public/assets/project-004.png') left center no-repeat;
+    background: url('/assets/project-004.png') left center no-repeat;
     background-size: 800px;
 
 
@@ -478,19 +478,19 @@
     }
 
     .mobileItem1 {
-        background: url('../../../public/assets/project-001.png') center no-repeat;
+        background: url('/assets/project-001.png') center no-repeat;
     }
 
     .mobileItem2 {
-        background: url('../../../public/assets/project-002.png') center no-repeat;
+        background: url('/assets/project-002.png') center no-repeat;
     }
 
     .mobileItem3 {
-        background: url('../../../public/assets/project-003.png') center no-repeat;
+        background: url('/assets/project-003.png') center no-repeat;
     }
 
     .mobileItem4 {
-        background: url('../../../public/assets/project-004.png') center no-repeat;
+        background: url('/assets/project-004.png') center no-repeat;
     }
 
 

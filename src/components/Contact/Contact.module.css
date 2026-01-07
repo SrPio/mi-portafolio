@@ -103,7 +103,7 @@
 }
 
 .container_networks {
-    background-image: url("../../../public/assets/contact-image.png");
+    background-image: url("/assets/contact-image.png");
     height: 600px;
     width: 300px;
     background-repeat: no-repeat;

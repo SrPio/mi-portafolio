@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'SF UI Display';
-  src: url(/public/fonts/SF-UI-Display-Bold.otf);
+  src: url(/fonts/SF-UI-Display-Bold.otf);
 }
 
 @font-face {
   font-family: 'SF UI Text';
-  src: url(/public/fonts/SF-UI-Text-Regular.otf);
+  src: url(/fonts/SF-UI-Text-Regular.otf);
 }
 
 
