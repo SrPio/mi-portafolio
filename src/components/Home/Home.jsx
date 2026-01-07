@@ -2,20 +2,21 @@ import React from "react";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const { t, i18n } = useTranslation();
   const variableText = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(variableText.current, {
       strings: [
-        "Ingeniero de Sistemas",
-        "Desarrollador Web Front-end",
-        "Diseñador UX/UI",
-        "Creativo",
-      ], // Strings to display
+        t("home.professions.systemsEngineer"),
+        t("home.professions.frontendDeveloper"),
+        t("home.professions.uxuiDesigner"),
+        t("home.professions.creative"),
+      ],
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 60,
@@ -26,11 +27,10 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
       /* cursorChar: "|", */
     });
 
-    // Destropying
-    return () => {
-      typed.destroy();
-    };
-  }, []);
+      return () => {
+        typed.destroy();
+      };
+    }, [i18n.language, t]);
 
   const containerRef = useRef(null);
 
@@ -63,17 +63,17 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
           }`}
         >
           <h1 className={`${isDarkMode ? styles.dark : ""}`}>
-            <span className={styles.home__textSaludo}>Hola, </span>
+            <span className={styles.home__textSaludo}>{t("home.greeting")}</span>
             soy
             <br />
-            Andrés Jaramillo
+            {t("home.name")}
             <br />
             <span ref={variableText} className={styles.home__variableText}>
-              Ingeniero de sistemas
+              {t("home.professions.systemsEngineer")}
             </span>
           </h1>
           <a href="#contact" className={styles.btn_saluda}>
-            Saluda
+            {t("home.greetButton")}
             <img loading="lazy" src="" alt="" />
           </a>
         </div>

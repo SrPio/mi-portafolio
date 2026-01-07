@@ -45,6 +45,11 @@ button {}
     align-items: center;
 }
 
+.container_language_theme {
+    display: flex;
+    align-items: center;
+}
+
 .container_botones_right button {
     background: none;
     color: inherit;
@@ -57,6 +62,10 @@ button {}
     margin-right: 26px;
     height: 1.5rem;
 
+}
+
+.container_botones_right .link_sections {
+    margin-right: 26px;
 }
 
 .container_botones_right img {
@@ -200,7 +209,8 @@ button {}
     -o-transition: background-color 0.5s ease;
 }
 
-.dark.container_botones_left .link_sections {
+.dark.container_botones_left .link_sections,
+.dark.container_botones_right .link_sections {
     color: #FFFFFF;
     transition: color 0.5s ease;
     -webkit-transition: color 0.5s ease;

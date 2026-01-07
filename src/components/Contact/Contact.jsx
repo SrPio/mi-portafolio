@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./Contact.module.css";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
-
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 
 function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const { t } = useTranslation();
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
               }`}
             >
               <h2 className={styles.form__submitted__text}>
-                ¡Gracias por contactarme!
+                {t("contact.thanks")}
               </h2>
             </form>
             <div className={styles.contanier_mobile_btns}>
@@ -64,7 +65,7 @@ function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
                   src="/assets/linkedin-icon.svg"
                   alt="icon"
                 />
-                Contáctame por Linkedin
+                {t("contact.contactLinkedIn")}
               </button>
               <button
                 className={styles.btn_github}
@@ -73,7 +74,7 @@ function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
                 }
               >
                 <img loading="lazy" src="/assets/github-icon.svg" alt="icon" />
-                Contáctame por GitHub
+                {t("contact.contactGitHub")}
               </button>
             </div>
             <div className={styles.container_networks}>
@@ -130,48 +131,48 @@ function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
             }`}
             onSubmit={handleSubmit}
           >
-            <h1>¡Trabajemos juntos!</h1>
+            <h1>{t("contact.title")}</h1>
             <div className={styles.form_gruop}>
-              <label htmlFor="nombre">Nombre</label>
+              <label htmlFor="nombre">{t("contact.name")}</label>
               <input
                 className={styles.input_contact}
                 type="text"
                 id="nombre"
                 name="nombre"
-                placeholder="Escribe tu nombre"
+                placeholder={t("contact.namePlaceholder")}
               />
               <ValidationError
-                prefix="Nombre"
+                prefix={t("contact.name")}
                 field="nombre"
                 errors={state.errors}
               />
             </div>
             <div className={styles.form_gruop}>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t("contact.email")}</label>
               <input
                 className={styles.input_contact}
                 id="email"
                 type="email"
                 name="email"
-                placeholder="Escribe tu email"
+                placeholder={t("contact.emailPlaceholder")}
               />
               <ValidationError
-                prefix="Email"
+                prefix={t("contact.email")}
                 field="email"
                 errors={state.errors}
               />
             </div>
             <div className={styles.form_gruop}>
-              <label htmlFor="mensaje">Mensaje</label>
+              <label htmlFor="mensaje">{t("contact.message")}</label>
               <textarea
                 className={styles.input_area}
                 type="text"
                 id="mensaje"
                 name="mensaje"
-                placeholder="Escribe tu mensaje"
+                placeholder={t("contact.messagePlaceholder")}
               />
               <ValidationError
-                prefix="Mensaje"
+                prefix={t("contact.message")}
                 field="mensaje"
                 errors={state.errors}
               />
@@ -181,7 +182,7 @@ function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
               type="submit"
               disabled={state.submitting}
             >
-              Enviar
+              {t("contact.send")}
             </button>
           </form>
           <div className={styles.contanier_mobile_btns}>
@@ -195,14 +196,14 @@ function Contact({ isDarkMode, changeIconSelected, isScrollChange }) {
               }
             >
               <img loading="lazy" src="/assets/linkedin-icon.svg" alt="icon" />
-              Contáctame por Linkedin
+              {t("contact.contactLinkedIn")}
             </button>
             <button
               className={styles.btn_github}
               onClick={() => window.open("https://github.com/SrPio", "_blank")}
             >
               <img loading="lazy" src="/assets/github-icon.svg" alt="icon" />
-              Contáctame por GitHub
+              {t("contact.contactGitHub")}
             </button>
           </div>
           <div className={styles.container_networks}>

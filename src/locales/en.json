@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "home": "Home",
+    "aboutMe": "About Me",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact",
+    "downloadCV": "Download my CV"
+  },
+  "home": {
+    "greeting": "Hello, ",
+    "name": "Andrés Jaramillo",
+    "professions": {
+      "systemsEngineer": "Systems Engineer",
+      "frontendDeveloper": "Front-end Web Developer",
+      "uxuiDesigner": "UX/UI Designer",
+      "creative": "Creative"
+    },
+    "greetButton": "Say Hello"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "description": "I am a Systems Engineer and Front-End Web Developer specialized in creating captivating applications and websites. With solid knowledge in HTML, CSS, Sass, JavaScript, and React, I can transform your ideas into an impactful digital experience. My obsession with details and my focus on the user's visual experience guarantee impressive results. Additionally, I am versed in tools like Adobe XD, Figma, and GIT to take collaboration and efficiency to the maximum. If you're looking for a Front-End development expert with exceptional UX/UI skills, Contact me!",
+    "downloadCV": "Download my CV"
+  },
+  "education": {
+    "title": "Education",
+    "degree": {
+      "title": "Systems Engineering",
+      "institution": "Universidad del Valle, Colombia.",
+      "date": "2017 - 2022"
+    },
+    "bootcamp": {
+      "title": "Front End Web Development",
+      "institution": "Acámica, Colombia.",
+      "date": "2021 - 2022"
+    },
+    "work1": {
+      "title": "FRONTEND DEVELOPER",
+      "institution": "PROtalento",
+      "date": "2022 - 2024"
+    },
+    "work2": {
+      "title": "FRONTEND DEVELOPER ENGINEER",
+      "institution": "B&B HOLDING MEDELLÍN S.A.S",
+      "date": "2024 - 2024"
+    },
+    "work3": {
+      "title": "WEB DEVELOPER",
+      "institution": "TECNOLOGÍA PLUS",
+      "date": "2025 – 2025"
+    },
+    "work4": {
+      "title": "SOFTWARE DEVELOPER",
+      "institution": "COODE",
+      "date": "2025 – Present"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "seeMore": "See More",
+    "demo": "Demo"
+  },
+  "contact": {
+    "title": "Let's work together!",
+    "name": "Name",
+    "namePlaceholder": "Write your name",
+    "email": "Email",
+    "emailPlaceholder": "Write your email",
+    "message": "Message",
+    "messagePlaceholder": "Write your message",
+    "send": "Send",
+    "thanks": "Thank you for contacting me!",
+    "contactLinkedIn": "Contact me on LinkedIn",
+    "contactGitHub": "Contact me on GitHub"
+  }
+}
+

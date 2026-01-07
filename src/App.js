@@ -5,15 +5,14 @@ import Education from './components/Education/Education';
 import Home from './components/Home/Home';
 import Navbar from './components/navbar/Navbar';
 import Projects from './components/Projects/Projects';
-
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from "react";
 
 function App() {
-
+  const { i18n } = useTranslation();
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [isDarkMode, setIsdarkMode] = useState(false);
   const [isScrollChange, setIsScrollChange] = useState(false);
-
 
   useEffect(() => {
 
@@ -23,6 +22,10 @@ function App() {
       setIsdarkMode(true)
     }
   }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
 
 

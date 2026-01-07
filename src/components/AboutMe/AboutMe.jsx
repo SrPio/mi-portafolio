@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./AboutMe.module.css";
-
 import { useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const { t } = useTranslation();
   const containerRef = useRef(null);
   useEffect(() => {
     if (!isScrollChange) {
@@ -44,7 +44,7 @@ function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
               <h1
                 className={`${isDarkMode ? styles.dark : ""} ${styles.title}`}
               >
-                Sobre Mí
+                {t("aboutMe.title")}
               </h1>
               <motion.img
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -62,16 +62,7 @@ function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              Soy Ingeniero de Sistemas y Desarrollador Web Front-End
-              especializado en crear aplicaciones y sitios web cautivadores. Con
-              sólidos conocimientos en HTML, CSS, Sass, JavaScript y React,
-              puedo transformar tus ideas en una experiencia digital impactante.
-              Mi obsesión por los detalles y mi enfoque en la experiencia visual
-              del usuario garantizan resultados impresionantes. Además, estoy
-              versado en herramientas como Adobe XD, Figma y GIT para llevar la
-              colaboración y la eficiencia al máximo. Si buscas un experto en
-              desarrollo Front-End con habilidades UX/UI excepcionales,
-              ¡Contáctame!
+              {t("aboutMe.description")}
             </motion.p>
           </div>
           <button
@@ -86,7 +77,7 @@ function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
             }
           >
             <img loading="lazy" src="/assets/download-icon.svg" alt="" />
-            Descargar mi CV
+            {t("aboutMe.downloadCV")}
           </button>
         </div>
       </div>

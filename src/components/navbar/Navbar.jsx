@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
+import { useTranslation } from "react-i18next";
 import styles from "./Navbar.module.css";
 
 function Navbar({ isDarkMode, manejoDarkMode, handleClick, selectedIcon }) {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <div
       className={`${useScrollPosition() > 0 ? styles.shadow : ""} ${
@@ -16,31 +23,47 @@ function Navbar({ isDarkMode, manejoDarkMode, handleClick, selectedIcon }) {
         }`}
       >
         <a href="#home" className={styles.link_sections}>
-          Inicio
+          {t("navbar.home")}
         </a>
         <a href="#aboutMe" className={styles.link_sections}>
-          Sobre mí
+          {t("navbar.aboutMe")}
         </a>
         <a href="#education" className={styles.link_sections}>
-          Trayectoria
+          {t("navbar.education")}
         </a>
         <a href="#projects" className={styles.link_sections}>
-          Proyectos
+          {t("navbar.projects")}
         </a>
         <a href="#contact" className={styles.link_sections}>
-          Contactos
+          {t("navbar.contact")}
         </a>
       </div>
-      <div className={styles.container_botones_right}>
-        <button onClick={manejoDarkMode}>
-          <img
-            loading="lazy"
-            src={`${
-              isDarkMode ? "/assets/sun-icon.svg" : "/assets/moon-icon.svg"
-            }`}
-            alt=""
-          />
-        </button>
+      <div
+        className={`${isDarkMode ? styles.dark : ""} ${
+          styles.container_botones_right
+        }`}
+      >
+        <div className={styles.container_language_theme}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              changeLanguage(i18n.language === "es" ? "en" : "es");
+            }}
+            className={styles.link_sections}
+          >
+            {i18n.language === "es" ? "EN" : "ES"}
+          </a>
+          <button onClick={manejoDarkMode}>
+            <img
+              loading="lazy"
+              src={`${
+                isDarkMode ? "/assets/sun-icon.svg" : "/assets/moon-icon.svg"
+              }`}
+              alt=""
+            />
+          </button>
+        </div>
         <div
           className={`${isDarkMode ? styles.dark : ""} ${
             styles.btn_downloadCV
@@ -53,7 +76,7 @@ function Navbar({ isDarkMode, manejoDarkMode, handleClick, selectedIcon }) {
           }
         >
           <img loading="lazy" src="/assets/download-icon.svg" alt="" />
-          Descargar mi CV
+          {t("navbar.downloadCV")}
         </div>
       </div>
 

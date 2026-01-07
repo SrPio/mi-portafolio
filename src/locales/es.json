@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "aboutMe": "Sobre mí",
+    "education": "Trayectoria",
+    "projects": "Proyectos",
+    "contact": "Contactos",
+    "downloadCV": "Descargar mi CV"
+  },
+  "home": {
+    "greeting": "Hola, ",
+    "name": "Andrés Jaramillo",
+    "professions": {
+      "systemsEngineer": "Ingeniero de Sistemas",
+      "frontendDeveloper": "Desarrollador Web Front-end",
+      "uxuiDesigner": "Diseñador UX/UI",
+      "creative": "Creativo"
+    },
+    "greetButton": "Saluda"
+  },
+  "aboutMe": {
+    "title": "Sobre Mí",
+    "description": "Soy Ingeniero de Sistemas y Desarrollador Web Front-End especializado en crear aplicaciones y sitios web cautivadores. Con sólidos conocimientos en HTML, CSS, Sass, JavaScript y React, puedo transformar tus ideas en una experiencia digital impactante. Mi obsesión por los detalles y mi enfoque en la experiencia visual del usuario garantizan resultados impresionantes. Además, estoy versado en herramientas como Adobe XD, Figma y GIT para llevar la colaboración y la eficiencia al máximo. Si buscas un experto en desarrollo Front-End con habilidades UX/UI excepcionales, ¡Contáctame!",
+    "downloadCV": "Descargar mi CV"
+  },
+  "education": {
+    "title": "Trayectoria",
+    "degree": {
+      "title": "Ingeniería de Sistemas",
+      "institution": "Universidad del Valle, Colombia.",
+      "date": "2017 - 2022"
+    },
+    "bootcamp": {
+      "title": "Desarrollo Web Front End",
+      "institution": "Acámica, Colombia.",
+      "date": "2021 - 2022"
+    },
+    "work1": {
+      "title": "FRONTEND DEVELOPER",
+      "institution": "PROtalento",
+      "date": "2022 - 2024"
+    },
+    "work2": {
+      "title": "ING. DESARROLLADOR FRONTEND",
+      "institution": "B&B HOLDING MEDELLÍN S.A.S",
+      "date": "2024 - 2024"
+    },
+    "work3": {
+      "title": "DESARROLLADOR WEB",
+      "institution": "TECNOLOGÍA PLUS",
+      "date": "2025 – 2025"
+    },
+    "work4": {
+      "title": "DESARROLLADOR DE SOFTWARE",
+      "institution": "COODE",
+      "date": "2025 – Actualidad"
+    }
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "seeMore": "Ver más",
+    "demo": "Demo"
+  },
+  "contact": {
+    "title": "¡Trabajemos juntos!",
+    "name": "Nombre",
+    "namePlaceholder": "Escribe tu nombre",
+    "email": "Email",
+    "emailPlaceholder": "Escribe tu email",
+    "message": "Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje",
+    "send": "Enviar",
+    "thanks": "¡Gracias por contactarme!",
+    "contactLinkedIn": "Contáctame por Linkedin",
+    "contactGitHub": "Contáctame por GitHub"
+  }
+}
+

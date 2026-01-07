@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Projects.module.css";
 import { useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
+  const { t } = useTranslation();
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
             styles.container_info_project
           }`}
         >
-          <h1 className={`${isDarkMode ? styles.dark : ""}`}>Mis Proyectos</h1>
+          <h1 className={`${isDarkMode ? styles.dark : ""}`}>{t("projects.title")}</h1>
           <div className={styles.container_items}>
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -52,7 +53,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               </div>
               <h2>Podcast Channel</h2>
               <h2>
-                Demo
+                {t("projects.demo")}
                 <img
                   className={styles.arrow__icon}
                   loading="lazy"
@@ -80,7 +81,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               </div>
               <h2>Peliculas-app</h2>
               <h2>
-                Demo
+                {t("projects.demo")}
                 <img
                   className={styles.arrow__icon}
                   loading="lazy"
@@ -106,7 +107,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               </div>
               <h2>Gifos-Aplicacion-web</h2>
               <h2>
-                Demo
+                {t("projects.demo")}
                 <img
                   className={styles.arrow__icon}
                   loading="lazy"
@@ -134,7 +135,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               </div>
               <h2>Devs-United</h2>
               <h2>
-                Demo
+                {t("projects.demo")}
                 <img
                   className={styles.arrow__icon}
                   loading="lazy"
@@ -172,7 +173,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
                     window.open("https://0ky9v.csb.app/", "_blank")
                   }
                 >
-                  Demo
+                  {t("projects.demo")}
                 </h2>
               </div>
             </motion.div>
@@ -208,7 +209,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
                     )
                   }
                 >
-                  Demo
+                  {t("projects.demo")}
                 </h2>
               </div>
             </motion.div>
@@ -241,7 +242,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
                     window.open("https://dk0og.csb.app/", "_blank")
                   }
                 >
-                  Demo
+                  {t("projects.demo")}
                 </h2>
               </div>
             </motion.div>
@@ -274,7 +275,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
                     window.open("https://devs-united-fff3e.web.app/", "_blank")
                   }
                 >
-                  Demo
+                  {t("projects.demo")}
                 </h2>
               </div>
             </motion.div>
@@ -283,7 +284,7 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
             className={styles.btn_projects}
             onClick={() => window.open("https://github.com/SrPio", "_blank")}
           >
-            Ver más
+            {t("projects.seeMore")}
           </button>
         </div>
       </div>
