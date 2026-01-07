@@ -13,7 +13,7 @@
 
 .education {
 
-    height: 800px;
+    min-height: 800px;
     padding: 0 100px 0 100px;
     width: 100%;
     max-width: 1600px;
@@ -29,12 +29,12 @@
 
 .education>h1,
 .item_title {
-    font-size: 40px;
+    font-size: 34px;
 }
 
 .item_date,
 .item_institution {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .item_img {
@@ -65,6 +65,21 @@
     margin-top: 70px;
 }
 
+.items_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 70px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column .container_item:first-child {
+    margin-top: 0;
+}
 
 /* Móvil */
 @media screen and (max-width: 1024px) {
@@ -74,6 +89,11 @@
         /* margin-top: 35px; */
         height: auto;
 
+    }
+
+    .items_wrapper {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .education>h1 {
