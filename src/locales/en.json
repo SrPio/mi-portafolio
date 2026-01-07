@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Home",
     "aboutMe": "About Me",
-    "education": "Education",
+    "education": "Trajectory",
     "projects": "Projects",
     "contact": "Contact",
     "downloadCV": "Download my CV"
@@ -25,7 +25,7 @@
     "downloadCV": "Download my CV"
   },
   "education": {
-    "title": "Education",
+    "title": "Trajectory",
     "degree": {
       "title": "Systems Engineering",
       "institution": "Universidad del Valle, Colombia.",
