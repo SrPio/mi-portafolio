@@ -9,6 +9,7 @@
   },
   "home": {
     "greeting": "Hello, ",
+    "soy": "I'm",
     "name": "Andrés Jaramillo",
     "professions": {
       "systemsEngineer": "Systems Engineer",

@@ -27,10 +27,10 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
       /* cursorChar: "|", */
     });
 
-      return () => {
-        typed.destroy();
-      };
-    }, [i18n.language, t]);
+    return () => {
+      typed.destroy();
+    };
+  }, [i18n.language, t]);
 
   const containerRef = useRef(null);
 
@@ -63,8 +63,10 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
           }`}
         >
           <h1 className={`${isDarkMode ? styles.dark : ""}`}>
-            <span className={styles.home__textSaludo}>{t("home.greeting")}</span>
-            soy
+            <span className={styles.home__textSaludo}>
+              {t("home.greeting")}
+            </span>
+            {t("home.soy")}
             <br />
             {t("home.name")}
             <br />
