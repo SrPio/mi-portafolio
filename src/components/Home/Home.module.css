@@ -47,8 +47,8 @@
     width: 600px;
     z-index: 3;
     pointer-events: none;
-    top: 30px;
-    left: 44%;
+    top: 27.7px;
+    left: 43.5%;
 }
 
 .container_title {
@@ -119,7 +119,7 @@
     position: absolute;
     top: 200px;
     right: 100px;
-    z-index: 3;
+    z-index: 5;
     width: 160px;
     cursor: move;
     /* fallback if grab cursor is unsupported */
@@ -145,7 +145,7 @@
     position: absolute;
     top: 300px;
     right: 460px;
-    z-index: 3;
+    z-index: 5;
     width: 80px;
     cursor: move;
     /* fallback if grab cursor is unsupported */
@@ -171,7 +171,7 @@
     position: absolute;
     top: 450px;
     right: 460px;
-    z-index: 3;
+    z-index: 5;
     width: 150px;
     cursor: move;
     /* fallback if grab cursor is unsupported */
@@ -197,7 +197,7 @@
     position: absolute;
     top: 530px;
     right: 110px;
-    z-index: 2;
+    z-index: 5;
     width: 100px;
     cursor: move;
     /* fallback if grab cursor is unsupported */
@@ -289,6 +289,8 @@
 
     .intro_video {
         width: 100%;
+        top: 10px;
+        left: -1%;
     }
 
     .back_pic {
