@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
   const { t, i18n } = useTranslation();
   const variableText = useRef(null);
+  const [introVideoEnded, setIntroVideoEnded] = useState(false);
+  const [showIntroVideo, setShowIntroVideo] = useState(true);
 
   useEffect(() => {
     const typed = new Typed(variableText.current, {
@@ -238,18 +240,56 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
               alt=""
             />
             <motion.img
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.5,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
               className={styles.pic}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: introVideoEnded ? 1 : 0 }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
               src="/assets/home-picTINY.png"
               alt=""
               loading="lazy"
             />
+            {showIntroVideo && (
+              <motion.video
+                className={styles.intro_video}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={
+                  introVideoEnded
+                    ? { opacity: 0, scale: 1.15 }
+                    : { opacity: 1, scale: 1.15 }
+                }
+                transition={
+                  introVideoEnded
+                    ? { duration: 0.9, ease: "easeInOut" }
+                    : {
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                      }
+                }
+                onAnimationComplete={() => {
+                  if (introVideoEnded) setShowIntroVideo(false);
+                }}
+                autoPlay
+                muted
+                playsInline
+                onEnded={() => {
+                  setIntroVideoEnded(true);
+                  setTimeout(() => setShowIntroVideo(false), 950);
+                }}
+                onLoadedMetadata={(e) => {
+                  e.currentTarget.playbackRate = 1.8;
+                }}
+              >
+                <source
+                  src="/assets/transparent-video-yo.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="/assets/transparent-video-yo.mov"
+                  type="video/quicktime"
+                />
+              </motion.video>
+            )}
           </div>
         </div>
       </div>

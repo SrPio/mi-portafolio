@@ -42,6 +42,15 @@
     -webkit-filter: drop-shadow(50px 30px 5px rgba(0, 0, 0, 0.25));
 }
 
+.intro_video {
+    position: absolute;
+    width: 600px;
+    z-index: 3;
+    pointer-events: none;
+    top: 30px;
+    left: 44%;
+}
+
 .container_title {
     min-width: 285px;
     width: 29vw;
@@ -276,6 +285,10 @@
 
         width: 100%;
 
+    }
+
+    .intro_video {
+        width: 100%;
     }
 
     .back_pic {
