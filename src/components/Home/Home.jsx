@@ -3,13 +3,129 @@ import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+
+const GLASS_HTML_FLOAT = { opacity: 1, scale: 1, x: 30, y: -20 };
+const GLASS_HTML_TRANSITION = {
+  default: {
+    duration: 0.3,
+    ease: "linear",
+  },
+  x: {
+    duration: 2,
+    ease: [0.17, 0.67, 0.83, 0.67],
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  y: {
+    duration: 2,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  scale: {
+    type: "spring",
+    damping: 3,
+    stiffness: 100,
+    restDelta: 0.001,
+  },
+};
+
+const GLASS_JS_FLOAT = { opacity: 1, scale: 1, x: 40, y: 25 };
+const GLASS_JS_TRANSITION = {
+  default: {
+    duration: 0.3,
+    ease: [0, 0.71, 0.2, 1.01],
+  },
+  x: {
+    duration: 5,
+    ease: [0.17, 0.67, 0.83, 0.67],
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  y: {
+    duration: 5,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  scale: {
+    type: "spring",
+    damping: 3,
+    stiffness: 100,
+    restDelta: 0.001,
+  },
+};
+
+const GLASS_CSS_FLOAT = { opacity: 1, scale: 1, x: -40, y: 30 };
+const GLASS_CSS_TRANSITION = {
+  default: {
+    duration: 0.3,
+    ease: [0, 0.71, 0.2, 1.01],
+  },
+  x: {
+    duration: 6,
+    ease: [0.17, 0.67, 0.83, 0.67],
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  y: {
+    duration: 6,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  scale: {
+    type: "spring",
+    damping: 3,
+    stiffness: 100,
+    restDelta: 0.001,
+  },
+};
+
+const GLASS_REACT_FLOAT = { opacity: 1, scale: 1, x: -30, y: 30 };
+const GLASS_REACT_TRANSITION = {
+  default: {
+    duration: 0.3,
+    ease: [0, 0.71, 0.2, 1.01],
+  },
+  x: {
+    duration: 4,
+    ease: [0.17, 0.67, 0.83, 0.87],
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  y: {
+    duration: 4,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+  scale: {
+    type: "spring",
+    damping: 3,
+    stiffness: 100,
+    restDelta: 0.001,
+  },
+};
 
 function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
   const { t, i18n } = useTranslation();
   const variableText = useRef(null);
   const [introVideoEnded, setIntroVideoEnded] = useState(false);
   const [showIntroVideo, setShowIntroVideo] = useState(true);
+
+  const glassHtmlControls = useAnimationControls();
+  const glassJsControls = useAnimationControls();
+  const glassCssControls = useAnimationControls();
+  const glassReactControls = useAnimationControls();
+
+  useEffect(() => {
+    glassHtmlControls.start(GLASS_HTML_FLOAT, GLASS_HTML_TRANSITION);
+    glassJsControls.start(GLASS_JS_FLOAT, GLASS_JS_TRANSITION);
+    glassCssControls.start(GLASS_CSS_FLOAT, GLASS_CSS_TRANSITION);
+    glassReactControls.start(GLASS_REACT_FLOAT, GLASS_REACT_TRANSITION);
+  }, []);
 
   useEffect(() => {
     const typed = new Typed(variableText.current, {
@@ -85,30 +201,11 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
           <div>
             <motion.img
               initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
-              animate={[{ opacity: 1, scale: 1, x: 30, y: -20 }]}
-              transition={{
-                default: {
-                  duration: 0.3,
-                  ease: "linear",
-                },
-                x: {
-                  duration: 2,
-                  ease: [0.17, 0.67, 0.83, 0.67],
-                  yoyo: Infinity,
-                },
-                y: {
-                  duration: 2,
-                  ease: "linear",
-                  yoyo: Infinity,
-                },
-                scale: {
-                  type: "spring",
-                  damping: 3,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
+              animate={glassHtmlControls}
               drag
+              onDragEnd={() =>
+                glassHtmlControls.start(GLASS_HTML_FLOAT, GLASS_HTML_TRANSITION)
+              }
               dragConstraints={{
                 top: -50,
                 left: -50,
@@ -121,30 +218,11 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
             />
             <motion.img
               initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
-              animate={{ opacity: 1, scale: 1, x: 40, y: 25 }}
-              transition={{
-                default: {
-                  duration: 0.3,
-                  ease: [0, 0.71, 0.2, 1.01],
-                },
-                x: {
-                  duration: 5,
-                  ease: [0.17, 0.67, 0.83, 0.67],
-                  yoyo: Infinity,
-                },
-                y: {
-                  duration: 5,
-                  ease: "linear",
-                  yoyo: Infinity,
-                },
-                scale: {
-                  type: "spring",
-                  damping: 3,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
+              animate={glassJsControls}
               drag
+              onDragEnd={() =>
+                glassJsControls.start(GLASS_JS_FLOAT, GLASS_JS_TRANSITION)
+              }
               dragConstraints={{
                 top: -50,
                 left: -50,
@@ -157,32 +235,11 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
             />
             <motion.img
               initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
-              animate={{ opacity: 1, scale: 1, x: -40, y: 30 }}
-              transition={{
-                default: {
-                  duration: 0.3,
-                  ease: [0, 0.71, 0.2, 1.01],
-                },
-                x: {
-                  duration: 6,
-                  ease: [0.17, 0.67, 0.83, 0.67],
-                  yoyo: Infinity,
-                  loop: Infinity,
-                },
-                y: {
-                  duration: 6,
-                  ease: "linear",
-                  yoyo: Infinity,
-                  loop: Infinity,
-                },
-                scale: {
-                  type: "spring",
-                  damping: 3,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
+              animate={glassCssControls}
               drag
+              onDragEnd={() =>
+                glassCssControls.start(GLASS_CSS_FLOAT, GLASS_CSS_TRANSITION)
+              }
               dragConstraints={{
                 top: -50,
                 left: -50,
@@ -196,30 +253,14 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
             />
             <motion.img
               initial={{ opacity: 0, scale: 0.5, x: 50, y: 0 }}
-              animate={{ opacity: 1, scale: 1, x: -30, y: 30 }}
-              transition={{
-                default: {
-                  duration: 0.3,
-                  ease: [0, 0.71, 0.2, 1.01],
-                },
-                x: {
-                  duration: 4,
-                  ease: [0.17, 0.67, 0.83, 0.87],
-                  yoyo: Infinity,
-                },
-                y: {
-                  duration: 4,
-                  ease: "linear",
-                  yoyo: Infinity,
-                },
-                scale: {
-                  type: "spring",
-                  damping: 3,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
+              animate={glassReactControls}
               drag
+              onDragEnd={() =>
+                glassReactControls.start(
+                  GLASS_REACT_FLOAT,
+                  GLASS_REACT_TRANSITION
+                )
+              }
               dragConstraints={{
                 top: -50,
                 left: -50,
