@@ -145,6 +145,17 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
     glassReactControls.start(GLASS_REACT_FLOAT, GLASS_REACT_TRANSITION);
   }, []);
 
+  // onEnded is the only thing that reveals the still portrait, and it never
+  // fires if playback stops short — a backgrounded tab pauses the video, and a
+  // decode stall leaves it hanging. Reveal the portrait once the intro has had
+  // well past its runtime so the hero can never stay empty.
+  useEffect(() => {
+    if (!showIntroVideo || introVideoEnded) return;
+
+    const watchdog = setTimeout(() => setIntroVideoEnded(true), 12000);
+    return () => clearTimeout(watchdog);
+  }, [showIntroVideo, introVideoEnded]);
+
   useEffect(() => {
     const typed = new Typed(variableText.current, {
       strings: [
@@ -335,6 +346,7 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
                   setIntroVideoEnded(true);
                   setTimeout(() => setShowIntroVideo(false), 950);
                 }}
+                onError={() => setIntroVideoEnded(true)}
                 onLoadedMetadata={(e) => {
                   e.currentTarget.playbackRate = 1.8;
                 }}
