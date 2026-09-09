@@ -109,11 +109,29 @@ const GLASS_REACT_TRANSITION = {
   },
 };
 
+// Safari decodes the intro's VP9/WebM but ignores WebM's alpha channel, so the
+// cutout renders over an opaque black box. Every browser on iOS/iPadOS is WebKit
+// underneath, so brand sniffing alone is not enough. Until we ship an
+// HEVC-with-alpha source these engines can composite, they get the still portrait.
+const shouldSkipIntroVideo = () => {
+  if (typeof navigator === "undefined") return true;
+
+  const ua = navigator.userAgent;
+  const isIOS =
+    /iPad|iPhone|iPod/.test(ua) ||
+    (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  const isSafari =
+    /^((?!chromium|chrome|crios|fxios|edg|android).)*safari/i.test(ua);
+
+  return isIOS || isSafari;
+};
+
 function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
   const { t, i18n } = useTranslation();
   const variableText = useRef(null);
+  const [skipIntroVideo] = useState(shouldSkipIntroVideo);
   const [introVideoEnded, setIntroVideoEnded] = useState(false);
-  const [showIntroVideo, setShowIntroVideo] = useState(true);
+  const [showIntroVideo, setShowIntroVideo] = useState(!skipIntroVideo);
 
   const glassHtmlControls = useAnimationControls();
   const glassJsControls = useAnimationControls();
@@ -283,7 +301,7 @@ function Home({ isDarkMode, changeIconSelected, isScrollChange }) {
             <motion.img
               className={styles.pic}
               initial={{ opacity: 0 }}
-              animate={{ opacity: introVideoEnded ? 1 : 0 }}
+              animate={{ opacity: introVideoEnded || skipIntroVideo ? 1 : 0 }}
               transition={{ duration: 0.9, ease: "easeInOut" }}
               src="/assets/home-picTINY.png"
               alt=""
