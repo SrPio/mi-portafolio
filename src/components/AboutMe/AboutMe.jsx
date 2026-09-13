@@ -71,8 +71,7 @@ function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
             }`}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1Uuoc7WKvAuqxcT6lpq-5pqriv0E6bj7m/view?usp=sharing",
-                "_blank"
+                "https://drive.usercontent.google.com/download?id=1CCba2O_LFVZLcjeJc8GMisglE6rgPHc5&export=download"
               )
             }
           >
