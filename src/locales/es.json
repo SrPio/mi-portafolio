@@ -42,19 +42,19 @@
       "date": "2022 - 2024"
     },
     "work2": {
-      "title": "ING. DESARROLLADOR FRONTEND",
-      "institution": "B&B HOLDING MEDELLÍN S.A.S",
-      "date": "2024 - 2024"
-    },
-    "work3": {
       "title": "DESARROLLADOR WEB",
       "institution": "TECNOLOGÍA PLUS",
-      "date": "2025 – 2025"
+      "date": "2025 - 2025"
+    },
+    "work3": {
+      "title": "DESARROLLADOR DE SOFTWARE",
+      "institution": "COODE",
+      "date": "2025 - 2026"
     },
     "work4": {
       "title": "DESARROLLADOR DE SOFTWARE",
-      "institution": "COODE",
-      "date": "2025 – Actualidad"
+      "institution": "DEVAL (Freelancer)",
+      "date": "2026 - Actualidad"
     }
   },
   "projects": {
@@ -76,4 +76,3 @@
     "contactGitHub": "Contáctame por GitHub"
   }
 }
-
