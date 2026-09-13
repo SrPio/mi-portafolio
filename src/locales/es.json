@@ -26,36 +26,63 @@
   },
   "education": {
     "title": "Trayectoria",
-    "degree": {
-      "title": "Ingeniería de Sistemas",
-      "institution": "Universidad del Valle, Colombia.",
-      "date": "2017 - 2022"
+    "filters": {
+      "all": "Todo",
+      "work": "Experiencia",
+      "edu": "Formación"
     },
-    "bootcamp": {
-      "title": "Desarrollo Web Front End",
-      "institution": "Acámica, Colombia.",
-      "date": "2021 - 2022"
+    "tags": {
+      "work": "Experiencia",
+      "edu": "Formación"
     },
-    "work1": {
-      "title": "FRONTEND DEVELOPER",
-      "institution": "PROtalento",
-      "date": "2022 - 2024"
-    },
-    "work2": {
-      "title": "DESARROLLADOR WEB",
-      "institution": "TECNOLOGÍA PLUS",
-      "date": "2025 - 2025"
-    },
-    "work3": {
-      "title": "DESARROLLADOR DE SOFTWARE",
-      "institution": "COODE",
-      "date": "2025 - 2026"
-    },
-    "work4": {
-      "title": "DESARROLLADOR DE SOFTWARE",
-      "institution": "DEVAL (Freelancer)",
-      "date": "2026 - Actualidad"
-    }
+    "less": "Ocultar anteriores",
+    "empty": "No hay entradas en esta categoría.",
+    "items": [
+      {
+        "id": "deval",
+        "kind": "work",
+        "date": "2026 - Actualidad",
+        "title": "DESARROLLADOR DE SOFTWARE",
+        "institution": "DEVAL (Freelancer)"
+      },
+      {
+        "id": "coode",
+        "kind": "work",
+        "date": "2025 - 2026",
+        "title": "DESARROLLADOR DE SOFTWARE",
+        "institution": "COODE"
+      },
+      {
+        "id": "tecnologia-plus",
+        "kind": "work",
+        "date": "2025 - 2025",
+        "title": "DESARROLLADOR WEB",
+        "institution": "TECNOLOGÍA PLUS"
+      },
+      {
+        "id": "protalento",
+        "kind": "work",
+        "date": "2022 - 2024",
+        "title": "FRONTEND DEVELOPER",
+        "institution": "PROtalento"
+      },
+      {
+        "id": "acamica",
+        "kind": "edu",
+        "date": "2021 - 2022",
+        "title": "Desarrollo Web Front End",
+        "institution": "Acámica, Colombia."
+      },
+      {
+        "id": "univalle",
+        "kind": "edu",
+        "date": "2017 - 2022",
+        "title": "Ingeniería de Sistemas",
+        "institution": "Universidad del Valle, Colombia."
+      }
+    ],
+    "more_one": "Ver {{count}} entrada anterior",
+    "more_other": "Ver {{count}} entradas anteriores"
   },
   "projects": {
     "title": "Mis Proyectos",

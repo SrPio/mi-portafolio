@@ -26,36 +26,63 @@
   },
   "education": {
     "title": "Trajectory",
-    "degree": {
-      "title": "Systems Engineering",
-      "institution": "Universidad del Valle, Colombia.",
-      "date": "2017 - 2022"
+    "filters": {
+      "all": "All",
+      "work": "Experience",
+      "edu": "Education"
     },
-    "bootcamp": {
-      "title": "Front End Web Development",
-      "institution": "Acámica, Colombia.",
-      "date": "2021 - 2022"
+    "tags": {
+      "work": "Experience",
+      "edu": "Education"
     },
-    "work1": {
-      "title": "FRONTEND DEVELOPER",
-      "institution": "PROtalento",
-      "date": "2022 - 2024"
-    },
-    "work2": {
-      "title": "WEB DEVELOPER",
-      "institution": "TECNOLOGÍA PLUS",
-      "date": "2025 - 2025"
-    },
-    "work3": {
-      "title": "SOFTWARE DEVELOPER",
-      "institution": "COODE",
-      "date": "2025 - 2026"
-    },
-    "work4": {
-      "title": "SOFTWARE DEVELOPER",
-      "institution": "DEVAL (Freelancer)",
-      "date": "2026 - Present"
-    }
+    "less": "Hide earlier entries",
+    "empty": "No entries in this category.",
+    "items": [
+      {
+        "id": "deval",
+        "kind": "work",
+        "date": "2026 - Present",
+        "title": "SOFTWARE DEVELOPER",
+        "institution": "DEVAL (Freelancer)"
+      },
+      {
+        "id": "coode",
+        "kind": "work",
+        "date": "2025 - 2026",
+        "title": "SOFTWARE DEVELOPER",
+        "institution": "COODE"
+      },
+      {
+        "id": "tecnologia-plus",
+        "kind": "work",
+        "date": "2025 - 2025",
+        "title": "WEB DEVELOPER",
+        "institution": "TECNOLOGÍA PLUS"
+      },
+      {
+        "id": "protalento",
+        "kind": "work",
+        "date": "2022 - 2024",
+        "title": "FRONTEND DEVELOPER",
+        "institution": "PROtalento"
+      },
+      {
+        "id": "acamica",
+        "kind": "edu",
+        "date": "2021 - 2022",
+        "title": "Front End Web Development",
+        "institution": "Acámica, Colombia."
+      },
+      {
+        "id": "univalle",
+        "kind": "edu",
+        "date": "2017 - 2022",
+        "title": "Systems Engineering",
+        "institution": "Universidad del Valle, Colombia."
+      }
+    ],
+    "more_one": "View {{count}} earlier entry",
+    "more_other": "View {{count}} earlier entries"
   },
   "projects": {
     "title": "My Projects",
