@@ -45,13 +45,14 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
                 delay: 0.5,
               }}
               className={`${styles.items} ${styles.items1}`}
-              onClick={() => window.open("https://0ky9v.csb.app/", "_blank")}
+              onClick={() => window.open("https://3d-andres-jaramillo.is-a.dev/", "_blank")}
             >
               <div className={styles.badge__items}>
-                <h3>HTML</h3>
-                <h3>CSS</h3>
+                <h3>THREE.JS</h3>
+                <h3>TYPESCRIPT</h3>
+                <h3>BLENDER</h3>
               </div>
-              <h2>Podcast Channel</h2>
+              <h2>{t("projects.portfolio3d")}</h2>
               <h2>
                 {t("projects.demo")}
                 <img
@@ -161,16 +162,17 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               ></div>
               <div className={styles.card_body}>
                 <div className={styles.badge__items}>
-                  <h3>HTML</h3>
-                  <h3>CSS</h3>
+                  <h3>THREE.JS</h3>
+                  <h3>TYPESCRIPT</h3>
+                  <h3>BLENDER</h3>
                 </div>
                 <h2 className={`${isDarkMode ? styles.dark : ""}`}>
-                  Podcast Channel
+                  {t("projects.portfolio3d")}
                 </h2>
                 <h2
                   className={styles.card_btn}
                   onClick={() =>
-                    window.open("https://0ky9v.csb.app/", "_blank")
+                    window.open("https://3d-andres-jaramillo.is-a.dev/", "_blank")
                   }
                 >
                   {t("projects.demo")}

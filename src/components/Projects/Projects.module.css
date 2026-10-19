@@ -156,7 +156,7 @@
 }
 
 .items1 {
-    background: url('/assets/project-001.png') center center no-repeat;
+    background: url('/assets/project-3d-portfolio.jpg') center center no-repeat;
     background-size: 700px;
 
 
@@ -176,7 +176,7 @@
 
 .items1:hover {
 
-    background: url('/assets/project-001.png') left center no-repeat;
+    background: url('/assets/project-3d-portfolio.jpg') center center no-repeat;
     background-size: 800px;
 
 
@@ -478,7 +478,7 @@
     }
 
     .mobileItem1 {
-        background: url('/assets/project-001.png') center no-repeat;
+        background: url('/assets/project-3d-portfolio.jpg') center / cover no-repeat;
     }
 
     .mobileItem2 {
