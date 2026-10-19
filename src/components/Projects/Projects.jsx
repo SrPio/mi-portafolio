@@ -48,9 +48,9 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               onClick={() => window.open("https://3d-andres-jaramillo.is-a.dev/", "_blank")}
             >
               <div className={styles.badge__items}>
-                <h3>THREE.JS</h3>
-                <h3>TYPESCRIPT</h3>
-                <h3>BLENDER</h3>
+                <h3 className={styles.badge_threejs}>THREE.JS</h3>
+                <h3 className={styles.badge_typescript}>TYPESCRIPT</h3>
+                <h3 className={styles.badge_blender}>BLENDER</h3>
               </div>
               <h2>{t("projects.portfolio3d")}</h2>
               <h2>
@@ -162,9 +162,9 @@ function Projects({ isDarkMode, changeIconSelected, isScrollChange }) {
               ></div>
               <div className={styles.card_body}>
                 <div className={styles.badge__items}>
-                  <h3>THREE.JS</h3>
-                  <h3>TYPESCRIPT</h3>
-                  <h3>BLENDER</h3>
+                  <h3 className={styles.badge_threejs}>THREE.JS</h3>
+                  <h3 className={styles.badge_typescript}>TYPESCRIPT</h3>
+                  <h3 className={styles.badge_blender}>BLENDER</h3>
                 </div>
                 <h2 className={`${isDarkMode ? styles.dark : ""}`}>
                   {t("projects.portfolio3d")}

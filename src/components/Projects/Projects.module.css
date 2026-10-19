@@ -134,6 +134,20 @@
     background-color: #00B9E8;
 }
 
+.badge__items h3.badge_threejs {
+    background-color: #111111;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.badge__items h3.badge_typescript {
+    background-color: #3178C6;
+}
+
+.badge__items h3.badge_blender {
+    background-color: #F5A623;
+    color: #1A1A1A;
+}
+
 
 .items>h2 {
     color: #FFFFFF;
