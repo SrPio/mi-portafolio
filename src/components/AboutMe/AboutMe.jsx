@@ -51,7 +51,7 @@ function AboutMe({ isDarkMode, changeIconSelected, isScrollChange }) {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
                 loading="lazy"
-                src="/assets/aboutme-picTINY.png"
+                src="/assets/aboutme-pic-web.png"
                 alt=""
               />
             </div>
